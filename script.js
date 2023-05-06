@@ -30,11 +30,25 @@ localStorage.test= 2 ;
 
 // }
 //  for in loop  right method 
-for (const key in localStorage) {
-    if (!localStorage.hasOwnProperty(key)) {
-       continue
+// for (const key in localStorage) {
+//     if (!localStorage.hasOwnProperty(key)) {
+//        continue
         
-    }
+//     }
 
-    alert(`${key}: ${localStorage.getItem(key)}`)
-}
+//     alert(`${key}: ${localStorage.getItem(key)}`)
+// }
+
+localStorage.user1 = {name: 'Rakibul'}
+// alert(localStorage.user);
+
+//  we can store  data  in json and user it 
+// when store data  local storage json.strigify
+localStorage.user = JSON.stringify({name: "Rajiul"})
+
+// if we  access first convert json.parse
+
+let user = JSON.parse(localStorage.user)
+alert(user.name)
+
+alert(JSON.stringify(localStorage , null , 2 ))
